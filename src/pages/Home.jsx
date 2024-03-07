@@ -7,6 +7,7 @@ export const Home = () => {
   const [flag,setFlag]=useState(false);
   const getData = async () => {
     const response = await fetch(`http://localhost:9090/api/notes/${sessionStorage.getItem("email")}`);
+    // const response = await fetch(`http://localhost:9090/api/notes/`);
     const json = await response.json();
     setData(json);
     console.log(json);
